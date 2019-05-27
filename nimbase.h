@@ -465,6 +465,7 @@ struct TFrame_ {
 
 #define NIM_POSIX_INIT  __attribute__((constructor))
 
+#if 0
 #ifdef __GNUC__
 #  define likely(x) __builtin_expect(x, 1)
 #  define unlikely(x) __builtin_expect(x, 0)
@@ -476,6 +477,7 @@ struct TFrame_ {
 #else
 #  define likely(x) (x)
 #  define unlikely(x) (x)
+#endif
 #endif
 
 #if 0 // defined(__GNUC__) || defined(__clang__)
