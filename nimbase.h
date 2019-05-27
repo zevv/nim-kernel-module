@@ -219,13 +219,7 @@ __clang__
 /* specify no calling convention */
 #define N_NOCONV_PTR(rettype, name) rettype (*name)
 
-#if defined(__GNUC__) || defined(__ICC__)
-#  define N_NOINLINE(rettype, name) rettype __attribute__((noinline)) name
-#elif defined(_MSC_VER)
-#  define N_NOINLINE(rettype, name) __declspec(noinline) rettype name
-#else
 #  define N_NOINLINE(rettype, name) rettype name
-#endif
 
 #define N_NOINLINE_PTR(rettype, name) rettype (*name)
 

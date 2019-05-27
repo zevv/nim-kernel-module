@@ -32,7 +32,6 @@ nimcache/nimhello.nim.c: nimhello.nim
 		--nimcache:./nimcache \
 		--os:kernel \
 		--newruntime \
-		--cpu:i386 \
 		--noMain:on \
 		-d:noSignalHandler \
 		-d:release \
